@@ -1,10 +1,38 @@
-// envoyer un email de confirmation
+const nodemailer = require('nodemailer');
+
 function envoyerEmail(email, callback) {
-    console.log(`4 - Envoi du mail de confirmation à ${email}`);
-    setTimeout(() => {
-        console.log(`5 - Email envoyé à ${email}`);
-        callback(null);
-    }, 1500);
+    // Configurer le transporteur SMTP
+    const transporter = nodemailer.createTransport({
+        service: 'gmail', // Vous pouvez utiliser un autre service (ex: Outlook, Yahoo)
+        auth: {
+            user: 'taaazzz.bg@gmail.com', // Remplacez par votre email
+            pass: 'gabg wqjl juhh yvvq'     // Remplacez par votre mot de passe ou un mot de passe d'application
+        }
+    });
+
+    // Définir les options de l'email
+    const mailOptions = {
+        from: 'wazzzzzzaaaa@popeye.fr', // L'expéditeur
+        to: email,                     // Le destinataire
+        subject: 'Confirmation d’inscription',
+        text: `Bonjour,
+
+Merci de vous être inscrit ! Votre compte a été créé avec succès.
+
+Cordialement,
+L'équipe`
+    };
+
+    // Envoyer l'email
+    transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+            console.error(`Erreur lors de l'envoi de l'email : ${err}`);
+            callback(err);
+        } else {
+            console.log(`Email envoyé : ${info.response}`);
+            callback(null);
+        }
+    });
 }
 
 module.exports = envoyerEmail;
