@@ -279,3 +279,46 @@ inscrireUtilisateur("jhon.doe@exemple.com");
 ## Auteur
 
 Projet créé pour illustrer l'utilisation des callbacks en JavaScript.
+
+---
+
+# Exo7 - Gestion des utilisateurs
+
+## Fonctionnalité : Envoi d'email de confirmation
+
+Ce projet inclut une fonctionnalité permettant d'envoyer un email de confirmation d'inscription à un utilisateur.
+
+### Fichier concerné
+
+- `/utilisateurs/envoyerEmail.js`
+
+### Description
+
+La fonction `envoyerEmail` utilise le module `nodemailer` pour envoyer un email de confirmation d'inscription. Voici les étapes principales :
+
+1. Configuration d'un transporteur SMTP avec un service comme Gmail.
+2. Définition des options de l'email (expéditeur, destinataire, sujet, contenu).
+3. Envoi de l'email et gestion des erreurs éventuelles.
+
+### Exemple d'utilisation
+
+```javascript
+const envoyerEmail = require('./utilisateurs/envoyerEmail');
+
+envoyerEmail('utilisateur@example.com', (err) => {
+    if (err) {
+        console.error('Erreur lors de l\'envoi de l\'email :', err);
+    } else {
+        console.log('Email envoyé avec succès !');
+    }
+});
+```
+
+### Remarques importantes
+
+- **Sécurité** : Les informations sensibles comme l'email et le mot de passe doivent être stockées dans des variables d'environnement pour éviter de les exposer dans le code source.
+- **Configuration** : Assurez-vous que le service SMTP utilisé est correctement configuré et que les autorisations nécessaires sont activées (par exemple, les mots de passe d'application pour Gmail).
+
+### Dépendances
+
+- [nodemailer](https://www.npmjs.com/package/nodemailer)
