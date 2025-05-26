@@ -118,6 +118,61 @@ Ce dossier contient des exercices pratiques sur la gestion des fichiers avec des
 
 ---
 
+### 4. 📂 **Dossier `utilisateurs`**
+Ce dossier contient une simulation du processus d'inscription d'un utilisateur en utilisant des **callbacks imbriqués**.
+
+#### 📄 **Fichiers :**
+- **`utilisateurs.js`** :
+  - 📋 Contient la liste des utilisateurs existants.
+  - ✨ Exemple :
+    ```javascript
+    const utilisateursExistants = ["alice@example.com", "bob@example.com", "charlie@example.com"];
+    ```
+
+- **`verifierEmail.js`** :
+  - 🛠️ **Fonction** : `verifierEmail(email, callback)`
+  - 🔍 Vérifie si un email est déjà utilisé.
+  - ✨ Exemple de sortie :
+    ```
+    1 - Vérification de l'email jhon.doe@exemple.com
+    1-2 - L'email jhon.doe@exemple.com est disponible
+    ```
+
+- **`creerCompte.js`** :
+  - 🛠️ **Fonction** : `creerCompte(email, callback)`
+  - 🆔 Crée un compte utilisateur avec un identifiant unique.
+  - ✨ Exemple de sortie :
+    ```
+    2 - Création du compte jhon.doe@exemple.com
+    3 - Compte créé pour jhon.doe@exemple.com avec ID unique 123456789
+    ```
+
+- **`envoyerEmail.js`** :
+  - 🛠️ **Fonction** : `envoyerEmail(email, callback)`
+  - 📧 Simule l'envoi d'un email de confirmation.
+  - ✨ Exemple de sortie :
+    ```
+    4 - Envoi du mail de confirmation à jhon.doe@exemple.com
+    5 - Email envoyé à jhon.doe@exemple.com
+    ```
+
+- **`inscrireUtilisateur.js`** :
+  - 🛠️ Coordonne le processus d'inscription en appelant les fonctions précédentes.
+  - ✨ Exemple de sortie complète :
+    ```
+    ✅ Inscription terminée pour jhon.doe@exemple.com
+    ```
+
+- **`index.js`** :
+  - 🧩 Fichier principal pour exécuter le processus d'inscription.
+  - ✨ Exemple d'utilisation :
+    ```javascript
+    const inscrireUtilisateur = require('./inscrireUtilisateur');
+    inscrireUtilisateur("jhon.doe@exemple.com");
+    ```
+
+---
+
 ## 🎯 **Objectifs pédagogiques**
 - ✅ Comprendre et utiliser les **callbacks** en JavaScript.
 - ✅ Gérer des opérations **asynchrones** en cascade.
@@ -137,4 +192,90 @@ Ce dossier contient des exercices pratiques sur la gestion des fichiers avec des
 ---
 
 ## 🏆 **Résultat attendu**
-Le projet met en pratique des concepts fondamentaux de **JavaScript**, notamment les **callbacks** et la gestion des erreurs, tout en simulant des scénarios réels comme la gestion de commandes ou la manipulation de fichiers.
+Le projet met en pratique des concepts fondamentaux de **JavaScript**, notamment les **callbacks** et la gestion des erreurs, tout en simulant des scénarios réels comme la gestion de commandes ou la simulation d'un processus d'inscription.
+
+---
+
+# Simulation d'inscription utilisateurs
+
+Ce projet simule le processus d'inscription d'un utilisateur en utilisant une série de fonctions avec des callbacks imbriqués. L'objectif est de vérifier si un email est disponible, de créer un compte utilisateur, puis d'envoyer un email de confirmation.
+
+## Fonctionnalités
+
+1. **Vérification de l'existence d'un utilisateur**  
+   Vérifie si l'email fourni est déjà utilisé.
+
+2. **Création du compte utilisateur**  
+   Génère un identifiant unique pour l'utilisateur.
+
+3. **Envoi d'un email de confirmation**  
+   Simule l'envoi d'un email de confirmation (sans réellement envoyer de mail).
+
+## Structure du projet
+
+Voici la structure des fichiers du projet :
+
+```
+/home/formation/Cours Edouard/Exo7/utilisateurs/
+├── utilisateurs.js          # Contient la liste des utilisateurs existants
+├── verifierEmail.js         # Vérifie si un email est disponible
+├── creerCompte.js           # Crée un compte utilisateur
+├── envoyerEmail.js          # Simule l'envoi d'un email de confirmation
+├── inscrireUtilisateur.js   # Coordonne le processus d'inscription
+└── index.js                 # Point d'entrée pour exécuter l'inscription
+```
+
+## Exemple de sortie attendue
+
+Voici un exemple de sortie pour l'inscription de l'utilisateur `jhon.doe@exemple.com` :
+
+```
+- vérification de l'email jhon.doe@exemple.com
+- l'email jhon.doe@exemple.com est disponible
+- création du compte jhon.doe@exemple.com
+- compte créé pour jhon.doe@exemple.com avec ID unique 123456789
+- envoi du mail de confirmation à jhon.doe@exemple.com
+- email envoyé à jhon.doe@exemple.com
+- inscription terminée pour jhon.doe@exemple.com
+```
+
+## Explication avec diagramme
+
+Voici un diagramme illustrant le processus d'inscription :
+
+![Diagramme du processus d'inscription](https://via.placeholder.com/800x400?text=Diagramme+du+processus+d%27inscription)
+
+1. **Vérification de l'email**  
+   Si l'email existe déjà, le processus s'arrête ici.
+
+2. **Création du compte**  
+   Si l'email est disponible, un compte est créé avec un identifiant unique.
+
+3. **Envoi de l'email de confirmation**  
+   Une fois le compte créé, un email de confirmation est envoyé.
+
+## Comment exécuter le projet
+
+1. Clonez le dépôt ou copiez les fichiers dans votre environnement local.
+2. Assurez-vous que Node.js est installé.
+3. Exécutez le fichier `index.js` avec la commande suivante :
+
+   ```bash
+   node index.js
+   ```
+
+4. Modifiez l'email dans `index.js` pour tester différents cas.
+
+## Aperçu du code
+
+### Exemple de fonction `inscrireUtilisateur`
+
+```javascript
+const inscrireUtilisateur = require('./inscrireUtilisateur');
+
+inscrireUtilisateur("jhon.doe@exemple.com");
+```
+
+## Auteur
+
+Projet créé pour illustrer l'utilisation des callbacks en JavaScript.
