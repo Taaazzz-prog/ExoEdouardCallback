@@ -1,0 +1,18 @@
+
+exercices: gestion de fichier avec callbacks
+objectif
+comprendre et utiliser les callback
+
+lire et ecrire dans des fichiers
+
+gerer correctements les erreurs avec les callback
+
+projets/
+  LireFichiers.js   
+  EcrireFichier.js
+  GererFichiers.js
+  test.txt avec Salut ca va dedans
+  1 cree une fonction pour lire un fichier lirefichier.js
+  ecris une fonction qui lit un fichier texte et renvoie son contenu via un callback
+
+
