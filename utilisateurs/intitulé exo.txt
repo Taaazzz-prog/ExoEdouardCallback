@@ -17,3 +17,14 @@ sorti attendue :
 - envoi du mail de confirmation a jhon.doe@exemple.com
 - email  envoye a jhon.doe@exemple.com
 - inscription terminee pour jhon.doe@exemple.com
+
+
+cretion de la structure
+
+/home/formation/Cours Edouard/Exo7/utilisateurs/
+├── utilisateurs.js
+├── verifierEmail.js
+├── creerCompte.js
+├── envoyerEmail.js
+├── inscrireUtilisateur.js
+└── index.js
