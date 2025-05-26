@@ -1,0 +1,19 @@
+Simulation d'inscription utilisateurs
+
+l'idee est d'ecrire une serie de fonctions utilisants des callbacks imbriqués
+pour simuler le processus d'inscription d'un utilisateurs
+
+- verification de l'existence d'un utilisateur
+- creation du compte utilisateurs- envoi d'un email de confirmation (sans envoyer le mail)
+
+cree une variable tableau avec les utilisateurs deja existant pour verifier si le mail est disponible
+
+sorti attendue :
+
+- verification de l'email jhon.doe@exemple.com
+- l'email jhon.doe@exemple.com est disponible
+- creation du compte jhon.doe@exemple.com
+- compte cree pour jhon.doe@exemple.com avec ID unique 123456789
+- envoi du mail de confirmation a jhon.doe@exemple.com
+- email  envoye a jhon.doe@exemple.com
+- inscription terminee pour jhon.doe@exemple.com
