@@ -6,7 +6,7 @@ function envoyerEmail(email, callback) {
         service: 'gmail', // Vous pouvez utiliser un autre service (ex: Outlook, Yahoo)
         auth: {
             user: 'taaazzz.bg@gmail.com', // Remplacez par votre email
-            pass: 'gabg wqjl juhh yvvq'     // Remplacez par votre mot de passe ou un mot de passe d'application
+            pass: ''     // Remplacez par votre mot de passe ou un mot de passe d'application
         }
     });
 
