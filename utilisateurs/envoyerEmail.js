@@ -5,8 +5,8 @@ function envoyerEmail(email, callback) {
     const transporter = nodemailer.createTransport({
         service: 'gmail', // Vous pouvez utiliser un autre service (ex: Outlook, Yahoo)
         auth: {
-            user: 'taaazzz.bg@gmail.com', // Remplacez par votre email
-            pass: ''     // Remplacez par votre mot de passe ou un mot de passe d'application
+            user: 'votre email', // Remplacez par votre email
+            pass: 'votre mot de passe appli'     // Remplacez par votre mot de passe ou un mot de passe d'application
         }
     });
 
